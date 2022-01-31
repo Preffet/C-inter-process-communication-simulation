@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <script src='./js/marked.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"
+        integrity="sha512-t1jq1b5U4hgz4lQoeyRD9QiVu99KxjyA939fnND+R+gLOHmuT5F9YFHJI1Nse1B1QG6/U11SPAc8fshYshb6MA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +12,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    
+    <script type="text/javascript">
+    function changePreview(){
+        document.getElementById('preview').innerHTML = marked.parse(document.getElementById("editor").value);
+    }
+    </script>
     <title>Markdown previewer</title>
 </head>
 
@@ -39,16 +46,55 @@
         <div class='row'>
             <div class='col-6 text-center'>
                 <h2>Editor</h2>
-                <textarea id='editor'></textarea>
+                <textarea id='editor' onkeyup=changePreview() style='min-width:80%'></textarea>
             </div>
             <div class='col-6 text-center'>
                 <h2>Previewer</h2>
                 <div id='preview'>
-                        <textarea></textarea>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+            document.onload = showDefault()
+                function showDefault() {
+                    let innerText=`
+# Welcome to my React Markdown Previewer!
+
+## This is a sub-heading...
+### And here's some other cool stuff:
+You can make text **bold** ...whoa!&#10;
+Or _italic_.&#10;
+Or... wait for it... **_both!_**&#10;
+And feel free to go crazy ~~crossing stuff out~~.&#10;
+There are [Links](https://www.freecodecamp.org)\n> and blockquotes! &#10;
+You can also add  \`inline code\`.&#10;
+And codeblocks: &#10;
+\`\`\`
+// this is multi-line code:
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == 'f' && lastLine == 'l') {
+    return multiLineCode;
+  }
+}
+\`\`\`
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
+
+
+1. And there are numbered lists too.
+1. Use just 1s if you want!
+1. And last but not least, let's not forget embedded images:
+
+![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
+
+`
+                    document.getElementById('editor').innerHTML = innerText
+                    changePreview()
+                }
+    </script>
 </body>
 
 </html>
