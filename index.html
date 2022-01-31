@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"
         integrity="sha512-t1jq1b5U4hgz4lQoeyRD9QiVu99KxjyA939fnND+R+gLOHmuT5F9YFHJI1Nse1B1QG6/U11SPAc8fshYshb6MA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -22,6 +24,64 @@
     }
     </script>
     <title>Markdown previewer</title>
+    <style>
+        #editor{
+            min-height:100%;
+        }
+        *{
+             font-family: Verdana, Arial;
+        }
+        #text2{
+            color:#475b9e;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 0 #415183;
+            padding-bottom: 20px;
+        }
+        #text1{
+            color:#8892b3;
+             font-weight: bold;
+             font-size:70px;
+        }
+        .animated-text
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -105deg,
+    #3a519e 0%,
+    #44107a 29%,
+    rgb(130, 91, 180) 67%,
+    #304896 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+#result{
+    color: rgb(4, 34, 99);
+    min-height: 100%;
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+    </style>
 </head>
 
 <body>
@@ -44,16 +104,18 @@
     <div class='container-fluid'>
         <div class='row'>
             <div class='col text-center'>
-            <h1>Markdown previewer</h1>    
+            <h1 style='padding-top:50px;
+            padding-bottom:90px'id='text1' class="animated-text">Markdown previewer</h1>
+              
             </div></div>
         <div class='row'>
             <div class='col-6 text-center'>
-                <h2>Editor</h2>
-                <textarea id='editor' onkeyup=changePreview() style='min-width:80%'></textarea>
+                <h2 id='text2'>Editor</h2>
+                <textarea id='editor' onkeyup=changePreview() style='min-width:80%'oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' autoFocus></textarea>
             </div>
             <div class='col-6 text-center'>
-                <h2>Previewer</h2>
-                <div id='preview'>
+                <h2 id='text2'>Previewer</h2>
+                <div id='preview' class="border border-primary rounded border-2" style="min-width:80%;min-height: 100%;" id=result></div>
                 </div>
             </div>
         </div>
@@ -77,9 +139,7 @@ And codeblocks: &#10;
 // this is multi-line code:
 function anotherExample(firstLine, lastLine) {
   if (firstLine == 'f' && lastLine == 'l') {
-    return multiLineCode;
-  }
-}
+    return multiLineCode; }
 \`\`\`
 - And of course there are lists.
   - Some are bulleted.
@@ -94,7 +154,8 @@ function anotherExample(firstLine, lastLine) {
 ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
 
 `
-                    document.getElementById('editor').innerHTML = innerText
+                    document.getElementById('editor').innerHTML = innerText;
+                    document.getElementById("preview").style.padding = "20px 10px 10px 20px"; 
                     changePreview()
                 }
     </script>
