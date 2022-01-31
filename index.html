@@ -15,7 +15,10 @@
     
     <script type="text/javascript">
     function changePreview(){
-        document.getElementById('preview').innerHTML = marked.parse(document.getElementById("editor").value);
+        marked.setOptions({
+            breaks: true
+        })
+        document.getElementById('preview').innerHTML = marked(document.getElementById("editor").value);
     }
     </script>
     <title>Markdown previewer</title>
