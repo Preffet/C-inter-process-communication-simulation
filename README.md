@@ -1,24 +1,10 @@
-This project is a solution to freecodecamp "Front End Development Libraries" course "Markdown Previewer" assignment.
 
-### Assignment
-### Markdown Previewer
+### CSC2035 Completed Assignment - systems programming and inter-process communication (IPC) 
 
-Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/GrZVVO.
+Introduction
 
-Fulfill the below user stories and get all of the tests to pass. Give it your own personal style.
+For this assignment you are provided with a partially completed project to demonstrate different approaches to maintaining the integrity of an inter-process communication (IPC) application. The IPC application is a collection of multiple process that communicate via a queue of jobs that is allocated in shared memory (see Section 5).
 
-You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. 
+Your task is to complete the project by implementing supporting library functions (see Section 7).
 
-User Story #1: I can see a textarea element with a corresponding id="editor".
-
-User Story #2: I can see an element with a corresponding id="preview".
-
-User Story #3: When I enter text into the #editor element, the #preview element is updated as I type to display the content of the textarea.
-
-User Story #4: When I enter GitHub flavored markdown into the #editor element, the text is rendered as HTML in the #preview element as I type (HINT: You don't need to parse Markdown yourself - you can import the Marked library for this: https://cdnjs.com/libraries/marked).
-
-User Story #5: When my markdown previewer first loads, the default text in the #editor field should contain valid markdown that represents at least one of each of the following elements: a heading element (H1 size), a sub heading element (H2 size), a link, inline code, a code block, a list item, a blockquote, an image, and bolded text.
-
-User Story #6: When my markdown previewer first loads, the default markdown in the #editor field should be rendered as HTML in the #preview element.
-
-Optional Bonus (you do not need to make this test pass): My markdown previewer interprets carriage returns and renders them as br (line break) elements.
+The project demonstrates both busy waiting and semaphore approaches to maintaining integrity of IPC applications. This will reinforce, in practice, the operating systems theory you will learn as part of this module.
