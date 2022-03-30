@@ -8,4 +8,4 @@ My task was to complete the project by implementing supporting library functions
 
 
 ### The application/simulation
-
+![Diagram illustrating the application/simulation ](https://github.com/Preffet/markdown-previewer/blob/master/applicationDiagram.jpg)
