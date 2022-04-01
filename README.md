@@ -1,7 +1,7 @@
 
 ## Completed CSC2035 Assignment - systems programming and inter-process communication (IPC) 
 
-Introduction
+### Introduction
 
 For this assignment I was provided with a partially completed project to demonstrate different approaches to maintaining the integrity of an inter-process communication (IPC) application (busy waiting and semaphore approaches). 
 My task was to complete the project by implementing supporting library functions. It helped me to reinforce, in practice, the operating systems theory I learnt as part of the CSC2035 module.
@@ -34,4 +34,56 @@ The combination of job pid and id means that, assuming integrity constraints are
 - In ipc_jobqueue.c - add wrapper functions for a queue of jobs that is stored in shared memory for IPC
 - In mutex_peterson.c - add the implementation of functions for Peterson's busy-waiting solution to mutual exclusion for two processes
 - In sem_jobqueue.c - create wrapper functions for a queue of jobs that is stored in shared memory and uses semaphores to maintain integrity constraints
+
+-----------------------------------------------------------------------------
+### How to build the project and run tests
+
+To BUILD THE PROJECT (including tests), in the project directory type the 
+following at the terminal command line prompt:
+```
+    make
+```
+This will build all project binaries.
+
+If you get unexpected errors, try:
+```
+    make clean
+    make
+```
+
+To RUN ALL TESTS, in the directory type the following at the terminal command
+line prompt:
+```
+    ./runtests.sh 
+```
+To run individual tests type:
+```
+    ./bin/test/test_<module_name>
+```
+where <module_name> is replaced by the module you want to test. For example:
+```
+    ./bin/test/test_joblog
+```
+to run joblog tests.
+
+The 3rd party munit library (https://nemequ.github.io/munit/#running-tests) has
+been used to write tests. You can pass munit command line options to 
+runtests.sh or to individual test programs. E.g.:
+```
+    ./runtests.sh --help
+```   
+will give a munit help message, as will:
+```
+    ./bin/test/test_joblog --help
+ ```   
+The most useful munit command line argument is --log-visible that can make
+munit logging visible. munit logging means the logging to stdout or stderr of 
+test debug and information messages (not logging of jobs, but see below).
+
+The following invocation of runtests.sh
+```
+    ./runtests.sh --log-visible debug --show-stderr
+```
+will log to the terminal window (or stderr) any debug and info level messages 
+that have been included in test programs and that you may find useful.
 
