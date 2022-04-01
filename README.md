@@ -25,3 +25,13 @@ As shown in the following figure, the project simulates an application in which 
 - a job label - an application-specific string that, for example, may describe the job
 
 The combination of job pid and id means that, assuming integrity constraints are maintained, each job will be globally unique even when multiple producers are producing jobs. The job id that is locally unique for a given producer is made globally unique for all producers by qualifying the job id with the producer's globally unique pid. In a real-world version of the application, the combination of pid and job id could be replaced by a could be replaced by an absolute URL that is qualified by the producer's domain name. The label could be replaced by a URL link to a job specification. The overall integrity constraint is that producers should not produce duplicate jobs and each job should only be consumed once by one consumer. That is, no two consumers should consume the same job.
+
+### What I had to do:
+- In job.c - add the representation of a job (pid, id and label) and functions to create, set and copy jobs
+- In joblog.c - create functions to set up a log and log jobs to file
+- In jobqueue.c - add the definition of and functions to manipulate a queue of jobs based on a fixed-sized circular buffer/array
+- In shobject_name.c - create the implementation of a utility function to generate shared object names (which are strings of a specified format)
+- In ipc_jobqueue.c - add wrapper functions for a queue of jobs that is stored in shared memory for IPC
+- In mutex_peterson.c - add the implementation of functions for Peterson's busy-waiting solution to mutual exclusion for two processes
+- In sem_jobqueue.c - create wrapper functions for a queue of jobs that is stored in shared memory and uses semaphores to maintain integrity constraints
+
