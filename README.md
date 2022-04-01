@@ -1,8 +1,8 @@
-<p style="text-align: left;">![Badge tracking last commit](https://img.shields.io/github/last-commit/Preffet/C-inter-process-communication-simulation?color=%23a877ed) ![Badge tracking size of the repo](https://img.shields.io/github/repo-size/Preffet/C-inter-process-communication-simulation?color=%23867be5)</p>
+<p style="text-align: left;"> ![Badge tracking last commit](https://img.shields.io/github/last-commit/Preffet/C-inter-process-communication-simulation?color=%23a877ed) ![Badge tracking size of the repo](https://img.shields.io/github/repo-size/Preffet/C-inter-process-communication-simulation?color=%23867be5) </p>
 
 
 ![banner2](https://user-images.githubusercontent.com/84241003/161313461-5fafaad3-0cfb-4e49-afe4-709a18e4a79b.png)
-<p style="text-align: center;">### Completed CSC2035 Assignment</p>
+<p style="text-align: center;"><b>Completed CSC2035 Assignment<b></p>
 
 ### Introduction
 
