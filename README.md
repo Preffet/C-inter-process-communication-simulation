@@ -1,15 +1,5 @@
-
-## Completed CSC2035 Assignment - systems programming and inter-process communication (IPC) 
-![Badge tracking last commit](https://img.shields.io/github/last-commit/Preffet/C-inter-process-communication-simulation?color=%23a877ed)
-![Badge tracking size of the repo](https://img.shields.io/github/repo-size/Preffet/C-inter-process-communication-simulation?color=%23867be5)
-banner tests:
 ![banner2](https://user-images.githubusercontent.com/84241003/161313461-5fafaad3-0cfb-4e49-afe4-709a18e4a79b.png)
-
-![banner](https://user-images.githubusercontent.com/84241003/161313467-9d45ce6c-bd3a-453b-9b8a-7a8460dfbc91.png)
-![Systemsdd_programming_and_inter_process_communication_(IPC)_simulation](https://user-images.githubusercontent.com/84241003/161313476-145482c7-c6a2-45a6-898f-c38eb7049a3c.png)
-![SYSTEMS_PRddOGRAMMING_AND_INTER_PROCESS_COMMUNICATION_(IPC)_SIMULATION](https://user-images.githubusercontent.com/84241003/161313484-941a6cf8-b0c0-48c0-86bd-e0ae60198ae0.png)
-
-
+### Completed CSC2035 Assignment ![Badge tracking last commit](https://img.shields.io/github/last-commit/Preffet/C-inter-process-communication-simulation?color=%23a877ed) ![Badge tracking size of the repo](https://img.shields.io/github/repo-size/Preffet/C-inter-process-communication-simulation?color=%23867be5)
 
 
 ### Introduction
