@@ -2,16 +2,6 @@
 
 ![banner2](https://user-images.githubusercontent.com/84241003/161315681-45e2d4f6-80bf-409b-bf54-69d3e326b13d.png)
 
-
-
-![banner2](https://user-images.githubusercontent.com/84241003/161313461-5fafaad3-0cfb-4e49-afe4-709a18e4a79b.png)
-
-<div class="Wrapper" markdown="1">
-# Completed CSC2035 Assignment
-
-this content is wrapped into a div with class "Wrapper"
-</div>
-
 ### Introduction
 
 For this assignment I was provided with a partially completed project to demonstrate different approaches to maintaining the integrity of an inter-process communication (IPC) application (busy waiting and semaphore approaches). 
