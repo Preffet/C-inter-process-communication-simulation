@@ -1,6 +1,7 @@
 
 ## Completed CSC2035 Assignment - systems programming and inter-process communication (IPC) 
-https://img.shields.io/github/last-commit/Preffet/C-inter-process-communication-simulation?color=%23a877ed
+![Badge tracking last commit](https://img.shields.io/github/last-commit/Preffet/C-inter-process-communication-simulation?color=%23a877ed)
+
 ### Introduction
 
 For this assignment I was provided with a partially completed project to demonstrate different approaches to maintaining the integrity of an inter-process communication (IPC) application (busy waiting and semaphore approaches). 
